@@ -1,0 +1,79 @@
+.action {
+    background: url('../images/bg/action-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 7.5%;
+    @include laptop() {
+        flex-flow: column;
+    }
+    &__left {
+        width: 50%;
+        @include laptop() {
+            width: 100%;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid rgba(0, 0, 0, .3);
+        }
+        &-title {
+            font-size: 32px;
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-bottom: 20px;
+            @include tablet() {
+                font-size: 30px;
+            }
+            @include phone() {
+                font-size: 20px;
+            }
+        }
+    }
+    &__left p {
+        font-size: 20px;
+        letter-spacing: 1px;
+        margin-bottom: 30px;
+        @include phone() {
+            font-size: 16px;
+            letter-spacing: initial;
+        }
+    }
+    &__right {
+        width: 49%;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        @include laptop() {
+            width: 100%;
+        }
+    }
+    &__item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        @include phone() {
+            flex-flow: column;
+        }
+        &-img {
+            display: block;
+            background: white;
+            border-radius: 50%;
+            width: 84px;
+            min-width: 84px;
+            height: 84px;
+            margin-right: 10px;
+            @include phone() {
+                margin-bottom: 20px;
+                margin-right: 0;
+            }
+        }
+        &-text {
+            font-size: 18px;
+            font-weight: bold;
+            @include phone() {
+                font-size: 16px;
+                text-align: center;
+            }
+        }
+    }
+}

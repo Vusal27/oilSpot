@@ -1,0 +1,29 @@
+.logo {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    &--footer {
+        height: 90px;
+        @include tablet() {
+            height: 50px;
+        }
+    }
+    &__img {
+        height: 100%;
+    }
+    &__text {
+        color: $yellows;
+        font-size: 40px;
+        font-weight: bold;
+        font-style: italic;
+        &--footer {
+            font-size: 60px;
+            @include tablet() {
+                font-size: 40px;
+            }
+        }
+    }
+    &__text span {
+        color: white;
+    }
+}

@@ -1,0 +1,171 @@
+.header {
+    background: url('../images/bg/header-bg.jpg');
+    background-size: cover;
+    padding: 30px 0;
+    min-height: 700px;
+    &__part {
+        display: flex;
+        justify-content: space-between;
+        @include laptop() {
+            flex-flow: column;
+        }
+        &--top {
+            margin-bottom: 70px;
+            flex-flow: row;
+            @include tablet() {
+                flex-flow: column;
+                align-items: center;
+            }
+        }
+    }
+    &__logo {
+        @include tablet() {
+            margin-bottom: 20px;
+        }
+    }
+    &__contact {
+        display: flex;
+        flex-flow: column;
+        align-items: flex-end;
+        position: relative;
+        @include tablet() {
+            align-items: center;
+        }
+        &::before {
+            content: '';
+            display: block;
+            height: 40px;
+            width: 40px;
+            background: url('../images/icons/phone.svg');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            position: absolute;
+            left: -45px;
+            top: 0;
+        }
+        &-link {
+            color: white;
+            font-size: 35px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            @include phone() {
+                font-size: 28px;
+            }
+        }
+        &-desc {
+            color: white;
+        }
+    }
+    &__col {
+        color: white;
+        font-size: 16px;
+        width: 45%;
+        @include laptop() {
+            width: 100%;
+        }
+        &--right {
+            display: flex;
+            justify-content: flex-end;
+            @include laptop() {
+                margin-top: 50px;
+                padding-top: 30px;
+                border-top: 1px solid rgba(250, 250, 250, .2);
+            }
+        }
+    }
+    &__col p {
+        font-size: 18px;
+        padding-right: 20px;
+        @include phone() {
+            font-size: 16px;
+        }
+    }
+    &__list {
+        @include laptop() {
+            width: 100%;
+            display: flex;
+        }
+        @include tablet() {
+            flex-flow: column;
+        }
+        &--popup {
+            @include laptop() {
+                display: block;
+            }
+        }
+    }
+    &__wrap {
+        position: relative;
+        margin-top: 65px;
+        padding-top: 65px;
+        display: flex;
+        align-items: center;
+        @include tablet() {
+            padding-top: 30px;
+            margin-top: 30px;
+        }
+        @include phone() {
+            flex-flow: column-reverse;
+            align-items: flex-start;
+        }
+    }
+    &__btn {
+        padding: 20px 20px 17px 65px;
+        background: #ffe130;
+        border: none;
+        border-radius: 5px;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: black;
+        margin-right: 20px;
+        cursor: pointer;
+        @include phone() {
+            padding: 15px 15px 15px 45px;
+        }
+        &-img {
+            position: absolute;
+            left: -5px;
+            bottom: -2px;
+            cursor: pointer;
+            @include phone() {
+                width: 35px;
+                left: 5px;
+            }
+        }
+        &-desc {
+            font-size: 10px;
+            opacity: .7;
+            max-width: 130px;
+            line-height: 1.7;
+            @include phone() {
+                max-width: 100%;
+            }
+        }
+    }
+    &__item {
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        @include laptop() {
+            flex-flow: column;
+            margin-right: 20px;
+        }
+        @include tablet() {
+            flex-flow: row;
+            margin-right: 0;
+        }
+        &:last-child {
+            @include laptop() {
+                margin-right: 0;
+            }
+        }
+        &-text {
+            @include phone() {
+                font-size: 15px;
+            }
+        }
+    }
+}
