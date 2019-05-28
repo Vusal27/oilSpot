@@ -1,0 +1,12 @@
+.feedback {
+    background: #efeded;
+    padding: 40px 10px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    overflow-x: hidden;
+    &__slider {
+        margin-bottom: 40px;
+        position: relative;
+    }
+}

@@ -1,0 +1,28 @@
+@keyframes show {
+    from {
+        transform: translateY(-60px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes moveToLeft {
+    from {
+        right: -120%;
+    }
+    to {
+        right: 120%;
+    }
+}
+
+@keyframes moveToRight {
+    from {
+        left: -120%;
+    }
+    to {
+        left: 120%;
+    }
+}

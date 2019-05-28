@@ -1,6 +1,6 @@
 html, body {
     width: 100%;
-    font-family: 'Exo2.0', Helvetica, sans-serif;
+    font-family: 'san-francisco', Helvetica, sans-serif;
 }
 ul {
     margin: 0;
@@ -54,54 +54,65 @@ input:-webkit-autofill {
     margin: 0 auto;
 }
 .title {
+    font-family: 'opensans', Helvetica, sans-serif;
     font-weight: bold;
-    margin-bottom: 40px;
-    font-size: 40px;
-    @include tablet() {
-        font-size: 36px;
+    margin-bottom: 60px;
+    font-size: 36px;
+    text-align: center;
+    &--main {
+        margin-bottom: 40px;
+        text-align: left;
+        font-size: 40px;
+        @include tablet() {
+            font-size: 36px;
+        }
+        @include phone() {
+            font-size: 26px;
+        }
     }
-    @include phone() {
-        font-size: 26px;
+    &--about {
+        z-index: 100;
+        position: relative;
+        @include tablet() {
+            font-size: 28px;
+            width: 85%;
+            margin: 0 auto 40px;
+        }
+        @include phone() {
+            font-size: 22px;
+        }
+    }
+    &--services {
+        font-size: 44px;
+        z-index: 100;
+        position: relative;
+        @include phone() {
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
     }
 }
 
-.up {
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    background: $yellows;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 0 4px rgba(0, 0, 0, .5);
-    position: fixed;
-    right: 20px;
-    bottom: 100px;
-    cursor: pointer;
-    visibility: hidden;
-    transition: .5s;
-    @include laptop-lg() {
-        height: 45px;
-        width: 45px;
-        right: 15px;
-    }
+.bg-text {
+    font-size: 120px;
+    font-weight: bold;
+    position: absolute;
+    color: $yellows;
+    opacity: .4;
+    white-space: nowrap;
+    font-family: 'opensans', Helvetica, sans-serif;
     @include laptop() {
-        right: 10px;
+        display: none;
     }
-    @include tablet() {
-        height: 35px;
-        width: 35px;
+    &--about {
+        top: 100%;
+        right: -200%;
+        animation: moveToLeft 35s linear infinite;
     }
-    @include phone() {
-        height: 25px;
-        width: 25px;
-        right: 5px;
-    }
-    &:hover {
-        transform: scale(1.2);
-    }
-    &-icon {
-        width: 80%;
-        height: 80%;
+    &--services {
+        z-index: 50;
+        top: 0;
+        left: -200%;
+        animation: moveToRight 38s linear infinite;
     }
 }

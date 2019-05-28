@@ -1,7 +1,8 @@
-// @import './layout/fonts.scss';
+@import './layout/fonts.scss';
 @import './config/mixins.scss';
 @import './layout/base.scss';
-@import './layout/animate.scss';
+@import './layout/animate-wow.scss';
+@import './layout/own-animation.scss';
 @import './blocks/header.scss';
 @import './blocks/logo.scss';
 @import './blocks/about.scss';
@@ -13,3 +14,6 @@
 @import './blocks/form.scss';
 @import './blocks/popup.scss';
 @import './blocks/popup-sm.scss';
+@import './blocks/btnUp.scss';
+@import './blocks/feedback.scss';
+@import './blocks/slider.scss';
