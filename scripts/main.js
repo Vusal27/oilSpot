@@ -110,20 +110,6 @@ window.onscroll = function() {
     }
 }
 
-// Скролл вверх
-arrowUp.addEventListener('click', toTop);
-
-function toTop() {
-    var pageY = window.pageYOffset || document.documentElement.scrollTop;
-    if (pageY > 0) {
-        window.scrollBy(0,-100);
-        var timeOut = setTimeout('toTop()', 20);
-    } else {
-        clearTimeout(timeOut);
-    }
-    return false;
-}
-
 // Открытие и закрытие модального окна
 var serv = document.querySelector('.services');
 var popup = document.querySelector('.popup');
@@ -170,7 +156,6 @@ function submit(event) {
         var xhr = new XMLHttpRequest();
         xhr.open('POST', 'main.php');
         xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
-
         xhr.send(JSON.stringify(data));
         xhr.addEventListener('load', function () {});
         form.elements.name.value = '';
@@ -194,7 +179,6 @@ function submitPopup(event) {
         var xhr = new XMLHttpRequest();
         xhr.open('POST', 'main.php');
         xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
-
         xhr.send(JSON.stringify(data));
         xhr.addEventListener('load', function () {});
         formPopup.elements.name.value = '';
@@ -231,7 +215,7 @@ function validate(form) {
     return valid;
 }
 
-// Скролл до услуг
+  // Навигация по hash
 $("a").on('click', function(event) {
     if (this.hash !== "") {
           event.preventDefault();
@@ -245,3 +229,32 @@ $("a").on('click', function(event) {
           });
     }
   });
+
+// Слайдер
+var slider = document.querySelector('.slider');
+var sliderPos = 0;
+
+function sliderToLeft() {
+    if (sliderPos !== (0)) {
+        sliderPos += 75;
+        slider.style.transform='translateX(' + sliderPos + 'vw)';
+        event.target.nextElementSibling.style.opacity='1';
+        event.target.nextElementSibling.style.cursor='pointer';
+    }
+    if (sliderPos === 0) {
+        event.target.style.opacity='.3';
+        event.target.style.cursor='default';
+    }
+}
+function sliderToRight() {
+    if (sliderPos !== (-300)) {
+        sliderPos -= 75;
+        slider.style.transform='translateX(' + sliderPos + 'vw)';
+        event.target.previousElementSibling.style.opacity='1';
+        event.target.previousElementSibling.style.cursor='pointer';
+    }
+    if (sliderPos === (-300)){
+        event.target.style.opacity='.3';
+        event.target.style.cursor='default';
+    }
+}

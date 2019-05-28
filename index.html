@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
     <head>
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link href="./styles/normalize/normalize.css" rel="stylesheet" type="text/css"/>
         <link href="./styles/main.css" rel="stylesheet"/>
-        
+        <link rel="shortcut icon" href="./images/icons/favicon.png" type="image/png">
+        <title>Автосервис oilSpot</title>
     </head>
     <body>
-        <div class="wrapper">
+        <div class="wrapper" id="wrapper">
             <header class="header">
                 <div class="header__part header__part--top container wow fadeInDown">
                     <div class="header__logo">
@@ -19,13 +20,13 @@
                         </a>
                     </div>
                     <div class="header__contact">
-                        <a href="tel:+7812356818" class="header__contact-link">+7(812)356818</a>
+                        <a href="tel:+7812356818" class="header__contact-link">+7 (812) 35-68-18</a>
                         <span class="header__contact-desc">Ежедневно с 10:00 до 22:00</span>
                     </div>
                 </div>
                 <div class="header__part container">
                     <div class="header__col wow fadeInLeft">
-                        <h1 class="title">Полный спектр услуг по обслуживанию вашего автомобиля в Москве</h1>
+                        <h1 class="title title--main">Полный спектр услуг по обслуживанию вашего автомобиля в Санкт-Петербурге</h1>
                         <p>Качественное ТО без потери гарантии, с отметкой в сервисной книге и обнулением ТО</p>
                         <div class="header__wrap">
                             <a href="#services" class="header__btn">посмотреть услуги</a>
@@ -75,8 +76,9 @@
                             </li>
                         </ul>
                     </div>
+                    <div class="bg-text bg-text--about">Преимущества</div>
                 </div>
-                <h2 class="about__title wow fadeInUp">Почему стоит обратиться именно к нам?</h2>
+                <h2 class="title title--about wow fadeInUp">Почему стоит обратиться именно к нам?</h2>
                 <ul class="about__list container">
                     <li class="about__item wow fadeInUp">
                         <img src="./images/icons/about-1.png" alt="about-icon" class="about__item-img">
@@ -121,7 +123,8 @@
                 </ul>
             </section>
             <section id="services" class="services">
-                <h2 class="services__title wow fadeInUp">Наши услуги</h2>
+                <div class="bg-text bg-text--services">Гарантия 6 месяцев</div>
+                <h2 class="title title--services wow fadeInUp">Наши услуги</h2>
                 <ul class="services__list container">
                     <li class="services__item wow fadeInUp" data-wow-offset='100'>
                         <img src="./images/content/service-1.png" alt="картинка услуги" class="services__item-img">
@@ -229,12 +232,73 @@
                     </form>
                 </div>
             </section>
+            <section class="feedback">
+                <h2 class="title">Отзывы наших клиентов</h2>
+                <div class="feedback__slider">
+                    <div class="slider-box">
+                        <div class="slider">
+                            <div class="slider__item">
+                                <div class="slider__img">
+                                    <img src="./images/icons/user-comment.svg" alt="user-icon">
+                                </div>
+                                <div class="slider__person">
+                                    <h3 class="slider__person-name">Мария Черкасова</h3>
+                                    <div class="slider__person-date">21.05.2019</div>
+                                    <p>Обслуживаю здесь свою машину. Много чего было сделано по работе и всегда всё на отлично!!! Квалифицированные мастера. Есть уютная комната отдыха, телевизор, кофе, Wi Fi. Вообщем рекомендую этот сервис!!!</p>
+                                </div>
+                            </div>
+                            <div class="slider__item">
+                                <div class="slider__img">
+                                    <img src="./images/icons/user-comment.svg" alt="user-icon">
+                                </div>
+                                <div class="slider__person">
+                                    <h3 class="slider__person-name">Павел Чесноков</h3>
+                                    <div class="slider__person-date">03.05.2019</div>
+                                    <p>Загонял Хёндай Крету, на ремонт коробки ребята молодцы разобрались поменяли подшипники все звуки прошли и не дорого взяли,все отлично!</p>
+                                </div>
+                            </div>
+                            <div class="slider__item">
+                                <div class="slider__img">
+                                    <img src="./images/icons/user-comment.svg" alt="user-icon">
+                                </div>
+                                <div class="slider__person">
+                                    <h3 class="slider__person-name">Александр Тарасов</h3>
+                                    <div class="slider__person-date">06.04.2019</div>
+                                    <p>Производили замену масла в коробке автомат остались очень довольны.И дальше планируем обслуживать машину в этом сервисе.</p>
+                                </div>
+                            </div>
+                            <div class="slider__item">
+                                <div class="slider__img">
+                                    <img src="./images/icons/user-comment.svg" alt="user-icon">
+                                </div>
+                                <div class="slider__person">
+                                    <h3 class="slider__person-name">Анастасия Черепанова</h3>
+                                    <div class="slider__person-date">30.03.2019</div>
+                                    <p>Замена масла и фильтров за 15 минут! Цены приемлемые, получил карту постоянного клиента, сделали бесплатно проверку ходовой и развала. Рекомендую</p>
+                                </div>
+                            </div>
+                            <div class="slider__item">
+                                <div class="slider__img">
+                                    <img src="./images/icons/user-comment.svg" alt="user-icon">
+                                </div>
+                                <div class="slider__person">
+                                    <h3 class="slider__person-name">Роберт Джинковский</h3>
+                                    <div class="slider__person-date">05.03.2019</div>
+                                    <p>Меняю масло в бимере только тут. Лью Mobil, также в бочках Shell и Castrol. При покупке масла, замена бесплатно. Фильтры есть в наличии.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider__arrow slider__arrow--left" onclick='sliderToLeft()'></div>
+                    <div class="slider__arrow slider__arrow--right" onclick='sliderToRight()'></div>
+                </div>
+            </section>
             <footer class="footer">
                 <ul class="footer__list container">
                     <li class="footer__item">
                         <h3 class="footer__item-title">контакты</h3>
-                        <div class="footer__item-address">129099, г. Москва, Звенигородский пр-т, д. 14, этаж 9</div>
-                        <div class="footer__item-phone">+7(812)356818</div>
+                        <div class="footer__item-address">129099, г. Санкт-Петербург, Пулковская ул, д. 114 корпус 2</div>
+                        <div class="footer__item-phone">+7 (812) 35-68-18</div>
                         <div class="footer__item-time">Ежедневно: 10:00 - 22:00</div>
                     </li>
                     <li class="footer__item">
@@ -273,9 +337,9 @@
                 </ul>
             </footer>
         </div>
-        <div id="up" class="up">
+        <a href="#wrapper" id="up" class="up">
             <img src="./images/icons/up.svg" alt="up" class="up-icon">
-        </div>
+        </a>
         <div class="popup">
             <div class="popup__container">
                 <div class="popup__part popup__part--left">
@@ -329,8 +393,6 @@
             </div>
         </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/jquery.inputmask.bundle.min.js"></script> -->
-        <!-- <script>$('#phone').inputmask("+7(999)999-99-99");</script> -->
         <script src="./scripts/main.js"></script>
         <script>new WOW().init();</script>
     </body>
